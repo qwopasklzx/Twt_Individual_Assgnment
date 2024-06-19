@@ -1,0 +1,204 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Aclonica&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; 
+    font-family: 'Lobster', cursive;
+    background-color: #f0f0f0; 
+}
+
+#video-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; 
+    object-fit: cover; 
+}
+
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    z-index: 2;
+    background-image: url('header.jpg'); 
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+}
+
+.nav-link {
+    margin-left: 20px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    transition: font-size 0.3s ease-in-out, color 0.3s ease-in-out; 
+}
+
+.nav-link:hover {
+    color: yellow; 
+    font-size: 20px; 
+}
+
+.content {
+    position: relative;
+    z-index: 1; 
+    padding: 50px 20px; 
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: transparent; 
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+}
+
+.content h1 {
+    margin-top: 0; 
+    margin-bottom: 20px; 
+    font-size: 48px;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.box {
+    position: relative;
+    width: 300px;
+    margin: 20px 0;
+    background-color: transparent; 
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); 
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer; 
+}
+
+.box:hover {
+    transform: translateY(-10px); 
+}
+
+.box img {
+    width: 100%;
+    height: 200px; 
+    object-fit: cover; 
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.box .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0; 
+    transition: opacity 0.3s ease-in-out;
+    border-radius: 10px;
+}
+
+.box:hover .overlay {
+    opacity: 1; 
+}
+
+.box .overlay-content {
+    text-align: center;
+    color: #fff;
+}
+
+.box .overlay-content a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    border: 2px solid #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.box .overlay-content a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.box .description {
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.7); 
+    text-align: center;
+    color: #fff;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.expanded-box {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55), right 0s;
+    z-index: 3; 
+    overflow-y: auto;
+    transform: translateX(100%);
+}
+
+.expanded-box.active {
+    right: 0;
+    transform: translateX(0);
+}
+
+.expanded-box-content {
+    max-width: 100%;
+    padding: 20px;
+    text-align: center;
+    color: #fff;
+    position: relative;
+    z-index: 1;
+    font-family: 'Aclonica', sans-serif;
+}
+
+.expanded-box-content img {
+    max-width: 100%;
+    height: 200px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.close-btn {
+    position: absolute;
+    top: 50px;
+    right: 10px;
+    color: #fff;
+    font-size: 30px;
+    cursor: pointer;
+    z-index: 2; 
+}
+ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    text-align: left; 
+}
+li {
+    margin-bottom: 10px;
+}
+
+strong {
+    color: #FF5733;
+}

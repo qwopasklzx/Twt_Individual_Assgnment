@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Aclonica&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="about.css">
+    <link rel="icon" type="image/x-icon" href="icon.png">
+
+</head>
+<body>
+    <video id="video-background" autoplay loop muted>
+        <source src="mapbackground.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <header>
+        <nav>
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="map.html" class="nav-link">Map</a>
+            <a href="us.html" class="nav-link">About</a>
+        </nav>
+    </header>
+
+    <div class="content">
+        <h1 style="padding: 10px;">More Details</h1>
+        <div class="box" id="box1" onclick="expandBox('box1')">
+            <img src="box1.jpg" alt="Box 1 Image">
+            <div class="overlay">
+                <div class="overlay-content">
+                    <a href="#">Click to see more</a>
+                </div>
+            </div>
+            <div class="description">
+                <p>Map</p>
+            </div>
+        </div>
+        <div class="box" id="box2" onclick="expandBox('box2')">
+            <img src="box2.jpg" alt="Box 2 Image">
+            <div class="overlay">
+                <div class="overlay-content">
+                    <a href="#">Click to see more</a>
+                </div>
+            </div>
+            <div class="description">
+                <p>Effects</p>
+            </div>
+        </div>
+        <div class="box" id="box3" onclick="expandBox('box3')">
+            <img src="jungle.jpg" alt="Box 3 Image">
+            <div class="overlay">
+                <div class="overlay-content">
+                    <a href="#">Click to see more</a>
+                </div>
+            </div>
+            <div class="description">
+                <p>Cause</p>
+            </div>
+        </div>
+        <div class="box" id="box4" onclick="expandBox('box4')">
+            <img src="method.jpg" alt="Box 4 Image">
+            <div class="overlay">
+                <div class="overlay-content">
+                    <a href="#">Click to see more</a>
+                </div>
+            </div>
+            <div class="description">
+                <p>Methods</p>
+            </div>
+        </div>
+
+    <div class="expanded-box" id="expandedBox1">
+        <div class="expanded-box-content">
+            <span class="close-btn" onclick="collapseBox('expandedBox1')">X</span>
+            <h2>Our Coverage Area</h2>
+            <img src="map2.jpg" alt="Expanded Image 1">
+            <p>Our focus covers the entire Southeast Asian region, including:</p>
+            <ul>
+                <li>Brunei</li>
+                <li>Cambodia</li>
+                <li>Indonesia</li>
+                <li>Laos</li>
+                <li>Malaysia</li>
+                <li>Myanmar</li>
+                <li>The Philippines</li>
+                <li>Singapore</li>
+                <li>Thailand</li>
+                <li>Vietnam</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="expanded-box" id="expandedBox2">
+        <div class="expanded-box-content">
+            <span class="close-btn" onclick="collapseBox('expandedBox2')">X</span>
+            <h2>Effects of Air Quality</h2>
+            <img src="effects.jpg" alt="Expanded Image 2">
+            <p>Air quality has profound effects on both human health and the environment. Poor air quality can lead to a range of adverse outcomes, including:</p>
+            <ul>
+                <li><strong>Respiratory and Cardiovascular Health:</strong> Exposure to pollutants such as particulate matter (PM2.5 and PM10), nitrogen dioxide (NO2), and sulfur dioxide (SO2) can cause or exacerbate respiratory conditions like asthma, bronchitis, and chronic obstructive pulmonary disease (COPD). It can also increase the risk of heart attacks and strokes.</li>
+                <li><strong>Reduced Life Expectancy:</strong> Long-term exposure to poor air quality is associated with reduced life expectancy. Studies have shown that people living in areas with high pollution levels tend to have shorter lifespans.</li>
+                <li><strong>Adverse Pregnancy Outcomes:</strong> Pregnant women exposed to high levels of air pollution are at greater risk of adverse outcomes such as preterm birth, low birth weight, and developmental issues in infants.</li>
+                <li><strong>Impact on Children:</strong> Children are particularly vulnerable to air pollution. Exposure to pollutants can lead to developmental delays, reduced lung growth, and an increased risk of respiratory infections.</li>
+                <li><strong>Environmental Damage:</strong> Air pollution can harm ecosystems by damaging vegetation, reducing biodiversity, and affecting soil and water quality. Acid rain, caused by pollutants like SO2 and NOx, can lead to the acidification of water bodies and soil, harming aquatic life and plants.</li>
+                <li><strong>Climate Change:</strong> Certain air pollutants, such as black carbon and methane, contribute to global warming. These pollutants affect the climate by trapping heat in the atmosphere, leading to changes in weather patterns and an increase in extreme weather events.</li>
+            </ul>
+        </div>
+    </div>
+    
+    <div class="expanded-box" id="expandedBox3">
+        <div class="expanded-box-content">
+            <span class="close-btn" onclick="collapseBox('expandedBox3')">X</span>
+            <h2>Causes of High AQI Levels</h2>
+            <img src="trees.jpg" alt="Expanded Image 3">
+            <ul>
+                <li><strong>Vehicle Emissions:</strong> Exhaust from cars, trucks, and other vehicles releases pollutants like nitrogen dioxide and particulate matter (PM).</li>
+                <li><strong>Industrial Emissions:</strong> Factories and power plants emit pollutants such as sulfur dioxide, carbon monoxide, and PM.</li>
+                <li><strong>Construction Activities:</strong> Dust and particulate matter from construction sites can contribute to high levels of PM in the air.</li>
+                <li><strong>Biomass Burning:</strong> Forest fires, agricultural burning, and burning of wood or other biomass release large amounts of smoke and particulate matter.</li>
+                <li><strong>Weather Conditions:</strong> Certain weather patterns, such as temperature inversions or stagnant air, can trap pollutants close to the ground, leading to higher AQI levels.</li>
+                <li><strong>Geographical Features:</strong> Valleys or areas with limited air circulation can trap pollutants, leading to higher concentrations and AQI levels.</li>
+                <li><strong>Residential Heating and Cooking:</strong> Burning wood, coal, or other fuels in homes for heating or cooking can release pollutants like carbon monoxide and PM into the air.</li>
+                <li><strong>Wildfires:</strong> Large wildfires release smoke and particulate matter over extensive areas, significantly impacting air quality.</li>
+                <li><strong>Industrial Accidents:</strong> Chemical spills, leaks, or accidents at industrial facilities can release hazardous pollutants into the air.</li>
+                <li><strong>Urbanization:</strong> High population density and urban development can lead to increased vehicular traffic and industrial activities, contributing to higher AQI levels.</li>
+            </ul>
+        </div>
+    </div>
+    
+    <div class="expanded-box" id="expandedBox4">
+        <div class="expanded-box-content">
+            <span class="close-btn" onclick="collapseBox('expandedBox4')">X</span>
+            <h2>Methods to Lower AQI Levels</h2>
+            <img src="method_ex.jpg" alt="Expanded Image 4">
+            <ul>
+                <li><strong>Promote Public Transportation:</strong> Encouraging the use of public transportation, biking, and walking can reduce the number of vehicles on the road, thus lowering vehicle emissions.</li>
+                <li><strong>Implement Emission Controls:</strong> Enforcing stricter emission standards for factories and power plants can significantly reduce the release of harmful pollutants.</li>
+                <li><strong>Enhance Urban Green Spaces:</strong> Increasing the number of parks, trees, and green roofs in urban areas can help absorb pollutants and improve air quality.</li>
+                <li><strong>Regulate Construction Activities:</strong> Implementing dust control measures at construction sites can reduce the amount of particulate matter released into the air.</li>
+                <li><strong>Reduce Biomass Burning:</strong> Implementing alternatives to biomass burning for agricultural waste management and promoting cleaner cooking technologies can lower emissions.</li>
+                <li><strong>Enhance Industrial Processes:</strong> Adopting cleaner production techniques and improving efficiency in industrial processes can minimize pollutant emissions.</li>
+                <li><strong>Increase Public Awareness:</strong> Educating the public about the sources of air pollution and ways to reduce personal contributions can encourage more environmentally friendly behavior.</li>
+                <li><strong>Monitor and Control Wildfires:</strong> Implementing better forest management practices and rapid response to wildfires can help prevent large-scale fires that severely impact air quality.</li>
+                <li><strong>Enforce Anti-Idling Laws:</strong> Implementing and enforcing anti-idling regulations for vehicles can help reduce emissions from unnecessary idling.</li>
+                <li><strong>Improve Waste Management:</strong> Proper disposal and treatment of waste, including reducing open burning of waste, can significantly lower air pollution.</li>
+            </ul>
+        </div>
+    </div>
+       
+    <script>
+        function expandBox(boxId) {
+            var expandedBox = document.getElementById('expandedBox' + boxId.charAt(3)); 
+            expandedBox.classList.add('active');
+            saveScrollPosition();
+        }
+    
+        function collapseBox(boxId) {
+            var expandedBox = document.getElementById(boxId);
+            expandedBox.classList.remove('active');
+            restoreScrollPosition();
+        }
+
+        function saveScrollPosition() {
+            document.body.dataset.scrollY = window.scrollY;
+        }
+
+        function restoreScrollPosition() {
+            window.scrollTo(0, document.body.dataset.scrollY);
+        }
+    </script>
+</body>
+</html>

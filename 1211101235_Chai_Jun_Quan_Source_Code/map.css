@@ -1,0 +1,273 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+#video-background {
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   z-index: -1; /* Ensure it's behind everything else */
+   object-fit: cover; /* Cover the entire viewport */
+}
+
+header {
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   padding: 20px;
+   box-sizing: border-box;
+   display: flex;
+   justify-content: flex-end;
+   align-items: center;
+   z-index: 2;
+   background-image: url('header.jpg'); /* Background image for the header */
+   background-size: cover;
+   background-position: center;
+   color: #fff;
+}
+
+.nav-link {
+    margin-left: 20px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px; /* Font size for navigation links */
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    transition: font-size 0.3s ease-in-out, color 0.3s ease-in-out; /* Transition for font-size and color */
+}
+
+.nav-link:hover {
+    color: yellow; /* Change text color to yellow on hover */
+    font-size: 20px; /* Increase font size on hover */
+}
+
+h1 {
+   font-family: 'Lobster', cursive;
+   font-size: 3em;
+   text-align: center;
+   margin-top: 60px; /* Add margin to prevent overlap with header */
+   background: -webkit-linear-gradient(180deg, rgb(255, 248, 168), rgb(158, 255, 181));
+   background: -moz-linear-gradient(180deg, rgb(255, 248, 168), rgb(158, 255, 181));
+   background: linear-gradient(180deg, rgb(255, 248, 168), rgb(158, 255, 181));
+   -webkit-background-clip: text;
+   background-clip: text;
+   -webkit-text-fill-color: transparent;
+}
+
+.widget {
+   border: 1px solid black;
+   padding: 10px;
+   border-radius: 5px;
+   position: relative;
+   margin: 20px auto; /* Center widget horizontally */
+   width: 60%; /* Adjust width as needed */
+   background-image: -moz-linear-gradient(135deg, rgb(194, 255, 253), rgb(255, 208, 179));
+
+   background-image: -webkit-linear-gradient(135deg, rgb(194, 255, 253), rgb(255, 208, 179));
+
+   background-image: linear-gradient(135deg, rgb(194, 255, 253), rgb(255, 208, 179));
+}
+
+.close-button {
+   position: absolute;
+   top: 5px;
+   right: 5px;
+   cursor: pointer;
+   background: transparent;
+   border: none;
+   font-size: 18px;
+}
+.input-container {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+#location {
+   padding: 10px;
+   width: 500px;
+   border: 1px solid #ccc;
+   border-radius: 5px;
+   margin-right: 10px;
+   font-size: 16px;
+   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+   background-image: -moz-linear-gradient(135deg, rgb(251, 199, 255), rgb(184, 254, 255));
+
+    background-image: -webkit-linear-gradient(135deg, rgb(251, 199, 255), rgb(184, 254, 255));
+
+    background-image: linear-gradient(135deg, rgb(251, 199, 255), rgb(184, 254, 255));
+}
+
+#searchbtn {
+   padding: 10px;
+   cursor: pointer;
+   border: 10px;
+   background-color: transparent;
+}
+
+#searchbtn img {
+   width: 42px;
+   height: 42px;
+   border-radius: 5px;
+}
+@keyframes pulse {
+   0%, 100% {
+       transform: scale(1);
+   }
+   50% {
+       transform: scale(1.2);
+   }
+}
+#searchbtn:hover {
+   animation: pulse 1s infinite;
+}
+.autocomplete-items {
+   border: 1px solid black;
+   border-top: none;
+   max-height: 150px;
+   overflow-y: auto;
+   background-image: -moz-linear-gradient(90deg, rgb(173, 176, 255), rgb(255, 166, 163));
+
+   background-image: -webkit-linear-gradient(90deg, rgb(173, 176, 255), rgb(255, 166, 163));
+
+   background-image: linear-gradient(90deg, rgb(173, 176, 255), rgb(255, 166, 163));
+}
+
+.autocomplete-item {
+   padding: 5px 10px;
+   cursor: pointer;
+}
+
+.autocomplete-item:hover {
+   background-color: #16f2f2;
+}
+#map {
+   height: calc(100vh - 200px); /* Adjust map height */
+   width: 80%; /* Adjust map width */
+   border: 1px solid #ccc; /* Add border to the map */
+   border-radius: 5px; /* Add border radius */
+   margin-top: 10px;
+   margin-left: auto; /* Center the map horizontally */
+   margin-right: auto; /* Center the map horizontally */
+}
+.aqi-table {
+       width: 80%;
+       margin: 20px auto;
+       border: 20px;
+       border-radius: 50px;
+       transition: transform 0.5s ease;
+       font-family:'Times New Roman', Times, serif;
+   }
+
+   .aqi-table th, .aqi-table td {
+       border: 1px solid #ddd;
+       padding: 8px;
+       border-radius: 10px;
+   }
+
+   .aqi-table th {
+       background-color: #f2f2f2;
+       text-align: center;
+   }
+
+   .aqi-table tr:hover {
+       background-color: #f1f1f1;
+       color: #000;
+   }
+   .good {
+       background-color: #009966;
+   }
+
+   .moderate {
+       background-color: #ffde33;
+       color: #000; /* Adjust text color for better contrast */
+   }
+
+   .unhealthy-sg {
+       background-color: #ff9933;
+   }
+
+   .unhealthy {
+       background-color: #cc0033;
+   }
+
+   .very-unhealthy {
+       background-color: #660099;
+   }
+
+   .hazardous {
+       background-color: #7e0023;
+   }
+
+   .table-title {
+       text-align: center;
+       font-size: 30px;
+       margin-top: 20px;
+       font-weight: bold;
+       font-family: 'Lobster', cursive;
+       background-image: -moz-linear-gradient(45deg, rgb(254, 189, 255), rgb(195, 153, 255));
+       background-image: -webkit-linear-gradient(45deg, rgb(254, 189, 255), rgb(195, 153, 255));
+       background-image: linear-gradient(45deg, rgb(254, 189, 255), rgb(195, 153, 255));
+       -webkit-background-clip: text;
+       background-clip: text;
+       -webkit-text-fill-color: transparent;
+   }
+
+   .legend {
+    background-image: -moz-linear-gradient(90deg, rgb(255, 239, 194), rgb(255, 173, 218));
+
+    background-image: -webkit-linear-gradient(90deg, rgb(255, 239, 194), rgb(255, 173, 218));
+    
+    background-image: linear-gradient(90deg, rgb(255, 239, 194), rgb(255, 173, 218));
+       padding: 10px;
+       border-radius: 5px;
+       box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+       z-index: 900; /* Ensure legend appears below navbar but above other content */
+       font-family: 'Lobster', cursive;
+   }
+
+   .legend i {
+       display: inline-block;
+       width: 20px;
+       height: 20px;
+       margin-right: 8px;
+   }
+
+   .legend b {
+       display: block;
+       margin-bottom: 5px;
+   }
+   .map-description{
+       text-align: center;
+       font-size: 50px;
+       background: -webkit-linear-gradient(180deg, rgb(255, 248, 168), rgb(158, 255, 181));
+       background: -moz-linear-gradient(180deg, rgb(255, 248, 168), rgb(158, 255, 181));
+       background: linear-gradient(180deg, rgb(255, 248, 168), rgb(158, 255, 181));
+       -webkit-background-clip: text;
+       background-clip: text;
+       -webkit-text-fill-color: transparent;
+       font-size: 30px;
+       font-family: 'Lobster', cursive;
+   }
+   footer {
+        background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+        color: #000;
+        padding: 10px;
+        text-align: center;
+        width: 100%;
+        position: relative;
+        box-sizing: border-box; /* Include padding in width */
+   }
+   .p{
+       text-align: center;
+       font-size: 20px;
+       background: -webkit-linear-gradient(180deg, rgb(255, 248, 168), rgb(158, 255, 181));
+       background: -moz-linear-gradient(180deg, rgb(255, 248, 168), rgb(158, 255, 181));
+       background: linear-gradient(180deg, rgb(255, 248, 168), rgb(158, 255, 181));
+       -webkit-background-clip: text;
+       background-clip: text;
+       -webkit-text-fill-color: transparent;
+       font-size: 30px;
+       font-family: 'Lobster', cursive;
+   }
